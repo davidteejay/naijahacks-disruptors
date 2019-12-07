@@ -39,54 +39,38 @@ Node, ReactJS, ExpressJS and MongoDB (with MongoDB Atlas)
 
 ### Clone the repository
 
-    ```(bash)
     git clone https://github.com/davidteejay/naijahacks-disruptors.git
-    ```
 
 ### Install all dependencies
 
 Using yarn
 
-    ```(bash)
     yarn install
-    ```
 
 Using npm
 
-    ```(bash)
     npm install
-    ```
 
 ### Start client to test from the browser
 
 #### CD into the client folder
 
-    ```(bash)
     cd client
-    ```
 
 Using yarn
 
-    ```(bash)
     yarn start
-    ```
 
 Using npm
 
-    ```(bash)
     npm start
-    ```
 
 ### Start server to test from node
 
 Using yarn
 
-    ```(bash)
     yarn dev
-    ```
 
 Using npm
 
-    ```(bash)
     npm run dev
-    ```
