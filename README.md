@@ -11,16 +11,13 @@
 
 # Problem
 
-Inadequate information on how to get physical instructors or experts
-that are good at a particular course of study or enterpreneural skillset.
-Tutorial centres not being able to get their target audience for their various programs and service
+Inability to get cheap, affordable, feel-at-home and secure accomodation for short stay
+especially people visiting big cities like Lagos, Ibadan etc. for the first time
 
 # Proposed Solution
 
-A platform that connect scholars, instructors/professionals, tutorial centres
-to students/individual that may need their help or interested in paying
-for their service either private or public in any course of study or
-enterpreneural skills acqusition.
+A platform that allows home owners to offer rooms in their homes for short rent,
+and get paid a token for it
 
 # Proposed Stack
 
@@ -28,12 +25,8 @@ Node, ReactJS, ExpressJS and MongoDB (with MongoDB Atlas)
 
 # Benefit
 
-- To provide a local connect among the above entities so as to
-improve education in Nigeria.
-- A good resource for students to find where to learn and who to learn from and also for parent to find instructors/teachers for their kids.
-- Provide revenue for instructors/tutorial centers/work-space owners.
-- Reduce rate of unemployment in Nigeria.
-
+- To provide another source of income to home owners
+- Provide secure and comfortable accomodation for people
 
 # Top-level directory layout
 
@@ -63,34 +56,6 @@ Using npm
 
 ```
 npm install
-```
-
-### Start watching the file and changes
-
-Using yarn
-
-```
-yarn run watch
-```
-
-Using npm
-
-```
-npm run watch
-```
-
-### Start the development server to serve static files and connect to database
-
-Using yarn
-
-```
-yarn run serve
-```
-
-Using npm
-
-```
-npm run serve
 ```
 
 ### Start project to test from the browser
