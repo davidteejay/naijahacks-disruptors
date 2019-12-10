@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Navbar from './components/layouts/Navbar';
+import Navbar from './components/layout/Navbar';
 import HostAHome from './components/dashboard/HostAHome';
 import RentAHome from './components/dashboard/RentAHome';
 import ContactUs from './components/dashboard/ContactUs';
