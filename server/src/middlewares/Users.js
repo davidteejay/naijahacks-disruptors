@@ -122,4 +122,17 @@ export default class UserMiddleware {
       return serverError(res, err.message);
     }
   }
+
+  static async makeUserHost(req, res, next) {
+    try {
+      const { createdBy } = req.body;
+
+      await Users
+        .findByIdAndUpdate(createdBy, { isHost: true })
+        .then(() => next())
+        .catch((err) => serverError(res, err.message));
+    } catch (err) {
+      return serverError(res, err.message);
+    }
+  }
 }

@@ -27,18 +27,18 @@ const Users = new Schema({
     type: String,
     required: true,
   },
-  averageRating: {
-    type: Number,
-    default: 0,
-  },
-  reviews: [{
+  saved: [{
     type: ObjectId,
-    ref: 'Reviews',
+    ref: 'Homes',
   }],
   isHost: {
     type: Boolean,
     default: false,
   },
+  homes: [{
+    type: ObjectId,
+    ref: 'Homes',
+  }],
   isAdmin: {
     type: Boolean,
     default: false,

@@ -3,7 +3,7 @@
 import crypto from 'crypto';
 
 import Users from '../models/Users';
-import generateToken from '../helpers/generateToken';
+import { generateToken } from '../helpers/generators';
 import { serverError, notFoundError } from '../helpers/errors';
 
 export default class UserController {
@@ -11,7 +11,6 @@ export default class UserController {
     try {
       await Users
         .find({ ...req.query, isDeleted: false })
-        .populate('role')
         .then((data) => res.status(200).send({
           data,
           message: 'All Users Fetched',
@@ -49,6 +48,8 @@ export default class UserController {
 
       await new Users({ ...req.body, hash, salt })
         .save()
+        .populate('saved')
+        .populate('homes')
         .then(async (data) => {
           const token = await generateToken(res, data);
           return res.status(200).send({
@@ -67,7 +68,10 @@ export default class UserController {
     try {
       const { email, password } = req.body;
 
-      await Users.findOne({ email, isDeleted: false })
+      await Users
+        .findOne({ email, isDeleted: false })
+        .populate('saved')
+        .populate('homes')
         .then(async (data) => {
           if (data === null) return notFoundError(res, 'Email or Password is incorrect');
 
