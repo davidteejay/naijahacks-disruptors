@@ -13,8 +13,8 @@ router
   .post(AuthMiddleware.validateToken, HomeMiddleware.validateData, UserMiddleware.makeUserHost, HomeController.addHome)
   .get(HomeController.getHomes);
 
-router
-  .post('/verify/:id', AuthMiddleware.validateToken, UserMiddleware.checkIfUserIsAdmin, HomeMiddleware.checkIfIdExists, HomeController.verifyHome);
+router.post('/approve/:id', AuthMiddleware.validateToken, UserMiddleware.checkIfUserIsAdmin, HomeMiddleware.checkIfIdExists, HomeController.approveHome);
+router.post('/reject/:id', AuthMiddleware.validateToken, UserMiddleware.checkIfUserIsAdmin, HomeMiddleware.checkIfIdExists, HomeController.rejectHome);
 
 router
   .route('/:id')

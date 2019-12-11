@@ -57,9 +57,10 @@ const Homes = new Schema({
     type: ObjectId,
     ref: 'Reviews',
   }],
-  isVerified: {
-    type: Boolean,
-    default: false,
+  status: {
+    type: String,
+    enum: ['pending', 'approved', 'rejected'],
+    default: 'pending',
   },
   isDeleted: {
     type: Boolean,

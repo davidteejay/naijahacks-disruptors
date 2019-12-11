@@ -95,15 +95,32 @@ export default class HomeController {
     }
   }
 
-  static async verifyHome(req, res) {
+  static async approveHome(req, res) {
     try {
       const { id } = req.params;
 
       await Homes
-        .findOneAndUpdate({ id }, { isVerified: true }, { new: true })
+        .findOneAndUpdate({ id }, { status: 'approved' }, { new: true })
         .then((data) => res.status(200).send({
           data,
-          message: 'Home updated Successfully',
+          message: 'Home approved Successfully',
+          error: false,
+        }))
+        .catch((err) => serverError(res, err.message));
+    } catch (err) {
+      return serverError(res, err.message);
+    }
+  }
+
+  static async rejectHome(req, res) {
+    try {
+      const { id } = req.params;
+
+      await Homes
+        .findOneAndUpdate({ id }, { status: 'rejected' }, { new: true })
+        .then((data) => res.status(200).send({
+          data,
+          message: 'Home rejected Successfully',
           error: false,
         }))
         .catch((err) => serverError(res, err.message));
