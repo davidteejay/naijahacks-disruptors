@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+@import url('https://cdn.materialdesignicons.com/4.7.95/css/materialdesignicons.min.css');
+
+%full {
+	width: 100%;
+	height: 100%;
+}
+
+html {
+	@extend %full;
+
+	body {
+		@extend %full;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		background-color: #fff;
+		font-family: 'Open Sans', sans-serif;
+
+		* {
+			box-sizing: border-box;
+		}
+
+		#root {
+			@extend %full;
+
+			.App {
+				@extend %full;
+
+				.wrapper {
+					@extend %full;
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.btn {
+	width: auto;
+	height: auto;
+	background-color: $accentPurple;
+	color: #fff;
+	padding: 5px 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all .5s;
+
+	&:hover {
+		opacity: .8;
+	}
+}

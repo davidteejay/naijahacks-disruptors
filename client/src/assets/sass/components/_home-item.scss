@@ -1,0 +1,10 @@
+.home-item.col {
+  padding: 15px;
+
+  .img {
+    width: 100%;
+    height: 350px;
+    @include background('../images/home-item.png');
+    border-radius: 10px;
+  }
+}

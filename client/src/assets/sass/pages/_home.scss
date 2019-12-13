@@ -1,0 +1,25 @@
+.home {
+  position: relative;
+
+  .home-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    @include background('../images/header-bg.png');
+    height: 100%;
+    width: 100%;
+
+    .overlay {
+      background-color: rgba(#000, .3);
+      width: 100%;
+      height: 100%;
+      padding-top: 70px;
+
+      .content {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

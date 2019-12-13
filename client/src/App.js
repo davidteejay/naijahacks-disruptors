@@ -6,6 +6,7 @@ import Routes from './routes'
 import store from './store'
 
 import 'materialize-css/dist/css/materialize.min.css'
+import './assets/css/style.css'
 
 const App = () => (
   <div className="App">

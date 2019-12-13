@@ -1,11 +1,19 @@
 import React from 'react';
 
+import Wrapper from '../components/Wrapper'
+
 //Host your Home
-function Home() {
+const Home = props => {
   return (
-    <div>
-      <p>Home</p>
-    </div>
+    <Wrapper className="home" {...props}>
+      <div className="home-content">
+        <div className="overlay">
+          <div className="content">
+            
+          </div>
+        </div>
+      </div>
+    </Wrapper>
   )
 }
 
