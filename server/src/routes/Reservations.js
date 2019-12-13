@@ -20,7 +20,7 @@ router.post('/reject/:id', AuthMiddleware.validateToken, ReservationMiddleware.c
 router
   .route('/:id')
   .get(AuthMiddleware.validateToken, ReservationMiddleware.checkIfIdExists, ReservationController.getOne)
-  .put(AuthMiddleware.validateToken, ReservationMiddleware.checkIfIdExists, ReservationController.updateHome)
-  .delete(AuthMiddleware.validateToken, ReservationMiddleware.checkIfIdExists, ReservationController.deleteHome);
+  .put(AuthMiddleware.validateToken, ReservationMiddleware.checkIfIdExists, ReservationController.update)
+  .delete(AuthMiddleware.validateToken, ReservationMiddleware.checkIfIdExists, ReservationController.delete);
 
 export default router;
