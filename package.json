@@ -23,7 +23,7 @@
     "ejs": "^2.6.1",
     "email-templates": "^6.0.2",
     "errorhandler": "^1.5.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-form-data": "^2.0.10",
     "http": "0.0.0",
     "joi": "^14.3.1",
